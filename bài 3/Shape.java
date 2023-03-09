@@ -18,18 +18,20 @@ public class Shape {
     public void setcolor(String color){
         this.color=color;
     }
-    public void setfilled(boolean filled){
+    public void isfilled(boolean filled){
         this.filled=filled;
     }
     //get tra ve gia tri
     public String getcolor(){
-        return this.getcolor();
+        return color;
     }
-    public boolean getfilled(){
-        return this.filled;
+    public boolean isfilled(){
+        return filled;
     }
     @Override
     public String toString(){
-        return "(color:"+getcolor()+")";
+        return "color:"
+                +getcolor()
+                + ( isfilled() ? " filled" : " not filled");
     }
 }
